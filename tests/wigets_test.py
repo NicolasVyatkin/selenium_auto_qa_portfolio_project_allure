@@ -1,7 +1,7 @@
 ﻿import time
 import allure
 
-from pages.wigets_page import AccordianPage, AutoCompletePage, DatePickerPage, MenuPage, ProgressBarPage, SliderPage, TabsPage, ToolTipsPage
+from pages.wigets_page import AccordianPage, AutoCompletePage, DatePickerPage, MenuPage, ProgressBarPage, SelectMenuPage, SliderPage, TabsPage, ToolTipsPage
 
 
 @allure.suite('Widgets')
@@ -140,3 +140,12 @@ class TestWigets:
             data = menu_page.check_menu()
             assert data == ['Main Item 1', 'Main Item 2', 'Sub Item', 'Sub Item', 'SUB SUB LIST »', 'Sub Sub Item 1',
                             'Sub Sub Item 2', 'Main Item 3'], "menu items do not exist or have not been selected"
+
+    @allure.feature('Select Menu Page')
+    class TestSelectMenu:
+
+        @allure.title('Check all of the select menu items')
+        def test_select_menu(self, driver):
+            select_menu_page = SelectMenuPage(
+                driver, 'https://demoqa.com/select-menu')
+            select_menu_page.open()

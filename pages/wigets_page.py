@@ -2,7 +2,7 @@
 import random
 import allure
 from generator.generator import generated_color, generated_date
-from locators.wigets_page_locators import AccordianPageLocators, AutoCompletePageLocators, DatePickerPageLocators, MenuPageLocators, ProgressBarPageLocators, SliderPageLocators, TabsPageLocators, ToolTipsPageLocators
+from locators.wigets_page_locators import AccordianPageLocators, AutoCompletePageLocators, DatePickerPageLocators, MenuPageLocators, ProgressBarPageLocators, SelectMenuPageLocators, SliderPageLocators, TabsPageLocators, ToolTipsPageLocators
 from selenium.common.exceptions import TimeoutException
 
 from selenium.webdriver import Keys
@@ -251,3 +251,28 @@ class MenuPage(BasePage):
             # self.element_is_visible(item)
             data.append(item.text)
         return data
+
+
+class SelectMenuPage(BasePage):
+
+    locators = SelectMenuPageLocators()
+
+    @allure.step('check select value')
+    def check_select_value(self):
+        pass
+
+    @allure.step('check select one')
+    def check_select_one(self):
+        pass
+
+    @allure.step('check old style select menu')
+    def check_old_style_select_menu(self):
+        pass
+
+    @allure.step('check multi select drop group')
+    def check_mult_select_drop_down(self):
+        pass
+
+    @allure.step('check standart multi select')
+    def check_standart_multi_select(self):
+        pass

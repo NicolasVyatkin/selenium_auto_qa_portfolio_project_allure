@@ -102,3 +102,12 @@ class ToolTipsPageLocators:
 class MenuPageLocators:
 
     MENU_ITEM_LIST = (By.CSS_SELECTOR, 'ul[id="nav"] li a')
+
+
+class SelectMenuPageLocators:
+    SELECT_VALUE = (By.CSS_SELECTOR, 'div[class=" css-1wa3eu0-placeholder"]')
+    SELECT_ONE = (By.CSS_SELECTOR, 'div[class=" css-1wa3eu0-placeholder"]')
+    OLD_STULE_SELECT_MENU = (By.CSS_SELECTOR, 'select[id="oldSelectMenu"]')
+    MULT_SELECT_DROP_DOWN = (
+        By.CSS_SELECTOR, 'div[class=" css-1wa3eu0-placeholder"]')
+    STANDART_MULTI_MENU = (By.CSS_SELECTOR, 'select[id="cars"]')
