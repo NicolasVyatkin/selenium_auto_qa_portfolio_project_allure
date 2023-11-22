@@ -259,7 +259,12 @@ class SelectMenuPage(BasePage):
 
     @allure.step('check select value')
     def check_select_value(self):
-        pass
+        select_value = self.element_is_visible(self.locators.SELECT_VALUE)
+        select_value.click()
+        select_value.send_keys(Keys.RETURN)
+        text= self.element_is_visible(self.locators.SELECT_VALUE_TEXT).text
+        return text
+        
 
     @allure.step('check select one')
     def check_select_one(self):
