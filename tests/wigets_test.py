@@ -149,3 +149,5 @@ class TestWigets:
             select_menu_page = SelectMenuPage(
                 driver, 'https://demoqa.com/select-menu')
             select_menu_page.open()
+            select_value = select_menu_page.check_select_value()
+            assert select_value == 'Group 1, option 1', 'element was not selected'
