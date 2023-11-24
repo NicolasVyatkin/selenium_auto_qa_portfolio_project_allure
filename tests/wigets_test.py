@@ -149,5 +149,13 @@ class TestWigets:
             select_menu_page = SelectMenuPage(
                 driver, 'https://demoqa.com/select-menu')
             select_menu_page.open()
-            select_value = select_menu_page.check_select_value()
-            assert select_value == 'Group 1, option 1', 'element was not selected'
+            select_value_1 = select_menu_page.check_select_value()
+            select_value_2 = select_menu_page.check_one_select_value()
+            select_value_3 = select_menu_page.check_old_style_select_menu()
+            select_value_4 = select_menu_page.check_mult_select_drop_down()
+            select_value_5 = select_menu_page.check_standart_multi_select()
+            assert select_value_1 == 'Group 1, option 1', 'element was not selected'
+            assert select_value_2 == 'Dr.', 'element was not selected'
+            assert select_value_3 == 'red', 'element was not selected'
+            assert select_value_4 == 'Green', 'element was not selected'
+            assert select_value_5 == 'volvo', 'element was not selected'
