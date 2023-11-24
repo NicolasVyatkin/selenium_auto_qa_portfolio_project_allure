@@ -267,17 +267,32 @@ class SelectMenuPage(BasePage):
         
 
     @allure.step('check select one')
-    def check_select_one(self):
-        pass
-
+    def check_one_select_value(self):
+        select_value = self.element_is_visible(self.locators.SELECT_ONE)
+        select_value.click()
+        select_value.send_keys(Keys.RETURN)
+        text= self.element_is_visible(self.locators.SELECT_ONE_TEXT).text
+        return text
     @allure.step('check old style select menu')
     def check_old_style_select_menu(self):
-        pass
+        select_value = self.element_is_visible(self.locators.OLD_STULE_SELECT_MENU)
+        select_value.click()
+        select_value.send_keys(Keys.RETURN)
+        text= self.element_is_visible(self.locators.OLD_STULE_SELECT_MENU).text
+        return text
 
     @allure.step('check multi select drop group')
     def check_mult_select_drop_down(self):
-        pass
+        select_value = self.element_is_visible(self.locators.MULT_SELECT_DROP_DOWN)
+        select_value.click()
+        select_value.send_keys(Keys.RETURN)
+        text= self.element_is_visible(self.locators.SELECT_SELECT_DROP_DOWN_TEXT).text
+        return text
 
     @allure.step('check standart multi select')
     def check_standart_multi_select(self):
-        pass
+        select_value = self.element_is_visible(self.locators.STANDART_MULTI_MENU)
+        select_value.click()
+        #select_value.send_keys(Keys.RETURN)
+        text= self.element_is_visible(self.locators.STANDART_MULTI_MENU).text
+        return text
