@@ -109,7 +109,14 @@ class SelectMenuPageLocators:
     SELECT_VALUE_TEXT = (By.CSS_SELECTOR, 'div[class=" css-1uccc91-singleValue"]')
     
     SELECT_ONE = (By.CSS_SELECTOR, 'div[class=" css-1wa3eu0-placeholder"]')
+    SELECT_ONE_TEXT = (By.CSS_SELECTOR, 'div[class=" css-1uccc91-singleValue"]')
+    
     OLD_STULE_SELECT_MENU = (By.CSS_SELECTOR, 'select[id="oldSelectMenu"]')
+    
+    
     MULT_SELECT_DROP_DOWN = (
         By.CSS_SELECTOR, 'div[class=" css-1wa3eu0-placeholder"]')
+    SELECT_SELECT_DROP_DOWN_TEXT = (By.CSS_SELECTOR, 'div[class="css-12jo7m5"]')
+    
+    
     STANDART_MULTI_MENU = (By.CSS_SELECTOR, 'select[id="cars"]')
